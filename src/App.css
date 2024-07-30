@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap');
+
+/* Apply the 'Roboto' font family and set the background color of the body */
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #e6fac2; /* Ensure the background color matches Picture 1 */
+}
+
+/* Main layout styling */
+.main-layout {
+  display: flex; /* Use flexbox for layout */
+  justify-content: center; /* Center content horizontally */
+  align-items: flex-start; /* Align items to the start vertically */
+  padding: 20px; /* Add padding around the layout */
+  height: 100vh; /* Set height to 100% of the viewport height */
+  gap: 25px; /* Add space between child elements */
+}
+
+/* Styling for both dialog boxes */
+.left-dialog,
+.right-dialog {
+  border: 2px dashed #9c27b0; /* Dashed border with purple color */
+  padding: 20px; /* Padding inside the dialog */
+  border-radius: 8px; /* Rounded corners */
+  background-color: #e6fac2; /* Background color of the dialog */
+  display: flex; /* Use flexbox for layout */
+  flex-direction: column; /* Arrange children in a column */
+  align-items: center; /* Center children horizontally */
+}
+
+/* Specific styling for the right dialog box */
+.right-dialog {
+  border: 2px solid #90caf9; /* Solid border with blue color */
+  background-color: #fff; /* White background color */
+  position: relative; /* Positioning context for the dropdown */
+}
+
+/* Styling for headings */
+.heading {
+  font-size: 14px; /* Font size */
+  color: #7c4dff; /* Text color */
+  margin-bottom: 10px; /* Space below the heading */
+  text-transform: lowercase; /* Transform text to lowercase */
+  display: flex; /* Use flexbox for layout */
+  align-items: center; /* Center items vertically */
+}
+
+/* Additional styling for blue headings */
+.blue-heading {
+  color: #5b9bd5; /* Blue text color */
+}
+
+/* Specific styling for the status heading */
+.status-heading {
+  margin-right: 5px; /* Space to the right of the heading */
+}
+
+/* Styling for status icon wrappers */
+.status-icon-wrapper {
+  display: flex; /* Use flexbox for layout */
+  align-items: center; /* Center items vertically */
+  justify-content: center; /* Center items horizontally */
+  width: 40px; /* Fixed width */
+  height: 40px; /* Fixed height */
+  border-radius: 12px; /* Rounded corners */
+  margin-bottom: 15px; /* Space below the icon */
+}
+
+/* Styling for the status bar */
+.status-bar {
+  display: flex; /* Use flexbox for layout */
+  align-items: center; /* Center items vertically */
+  padding: 10px; /* Padding inside the status bar */
+  font-size: 16px; /* Font size */
+  color: #888; /* Text color */
+  border: 1px solid #e0e0e0; /* Border color */
+  border-radius: 8px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  text-align: center; /* Center text horizontally */
+  margin-bottom: 10px; /* Space below the status bar */
+}
+
+/* Container for the dropdown menu */
+.dropdown-container {
+  position: absolute; /* Absolute positioning */
+  top: 110px; /* Position from the top */
+  left: 0; /* Position from the left */
+  right: 0; /* Position from the right */
+  z-index: 10; /* Ensure the dropdown appears above other elements */
+  width: 130%; /* Width of the dropdown container */
+}
+
+/* Styling for the dropdown */
+.dropdown {
+  width: 100%; /* Full width */
+  border: 1px solid #e0e0e0; /* Border color */
+  border-radius: 8px; /* Rounded corners */
+  background-color: #fff; /* White background */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Shadow for the dropdown */
+}
+
+/* Styling for the dropdown list */
+.dropdown-list {
+  list-style-type: none; /* Remove default list styling */
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+}
+
+/* Styling for each dropdown item */
+.dropdown-item {
+  display: flex; /* Use flexbox for layout */
+  align-items: center; /* Center items vertically */
+  padding: 15px 20px; /* Padding inside each item */
+  cursor: pointer; /* Pointer cursor on hover */
+  border-bottom: 1px solid #e0e0e0; /* Bottom border */
+}
+
+/* Remove the bottom border for the last item */
+.dropdown-item:last-child {
+  border-bottom: none;
+}
+
+/* Styling for icons within the dropdown */
+.icon {
+  width: 40px; /* Fixed width */
+  height: 40px; /* Fixed height */
+  border-radius: 50%; /* Circular icon */
+  display: flex; /* Use flexbox for layout */
+  align-items: center; /* Center items vertically */
+  justify-content: center; /* Center items horizontally */
+  margin-right: 15px; /* Space to the right of the icon */
+}
+
+/* Styling for labels within the dropdown */
+.label {
+  font-size: 15px; /* Font size */
+  color: #333; /* Text color */
+  flex-grow: 1; /* Allow the label to grow */
+  text-align: left; /* Align text to the left */
+}
+
+/* Change background color on hover for dropdown items */
+.dropdown-item:hover {
+  background-color: #f5f5f5;
+}
