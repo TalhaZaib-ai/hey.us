@@ -3,16 +3,13 @@ import './App.css';
 
 // Main App component
 const App = () => {
-  // State to manage if the dropdown is open
   const [isDropdownOpen, setDropdownOpen] = useState(false);
-  // State to manage the selected status
   const [selectedStatus, setSelectedStatus] = useState({
     label: 'Status',
     color: '',
     icon: null
   });
 
-  // List of status options with label, color, and icon
   const statusOptions = [
     { label: 'Todo', color: '#f3e5f5', icon: <TodoIcon /> },
     { label: 'In-Progress', color: '#e3f2fd', icon: <InProgressIcon /> },
@@ -20,12 +17,10 @@ const App = () => {
     { label: 'Cancelled', color: '#ffebee', icon: <CancelledIcon /> },
   ];
 
-  // Function to toggle the dropdown open/close state
   const toggleDropdown = () => {
     setDropdownOpen(!isDropdownOpen);
   };
 
-  // Function to handle the selection of a status
   const handleSelectStatus = (option) => {
     setSelectedStatus(option);
     setDropdownOpen(false);
@@ -33,29 +28,24 @@ const App = () => {
 
   return (
     <div className="main-layout">
-      {/* Left dialog section */}
       <div className="left-dialog">
         <div className="heading">
           <span className="status-heading">status</span>
         </div>
-        {/* Render status icons */}
         {statusOptions.map((option, index) => (
           <div key={index} className="status-icon-wrapper" style={{ backgroundColor: option.color }}>
             {option.icon}
           </div>
         ))}
       </div>
-      {/* Right dialog section */}
       <div className="right-dialog">
         <div className="heading blue-heading">dropdown - status</div>
-        {/* Status bar that toggles the dropdown */}
         <div className="status-bar" onClick={toggleDropdown}>
           <div className="status-icon-wrapper" style={{ backgroundColor: selectedStatus.color }}>
             {selectedStatus.icon}
           </div>
           <span className="label">{selectedStatus.label}</span>
         </div>
-        {/* Dropdown menu */}
         {isDropdownOpen && (
           <div className="dropdown-container">
             <div className="dropdown">

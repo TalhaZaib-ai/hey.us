@@ -43,6 +43,9 @@ body {
   text-transform: lowercase; /* Transform text to lowercase */
   display: flex; /* Use flexbox for layout */
   align-items: center; /* Center items vertically */
+  justify-content: center; /* Center text horizontally */
+  width: 100%; /* Ensure the heading takes full width of the container */
+  height: 40px; /* Set a fixed height to help center the text vertically */
 }
 
 /* Additional styling for blue headings */
@@ -70,6 +73,7 @@ body {
 .status-bar {
   display: flex; /* Use flexbox for layout */
   align-items: center; /* Center items vertically */
+  justify-content: center; /* Center items horizontally */
   padding: 10px; /* Padding inside the status bar */
   font-size: 16px; /* Font size */
   color: #888; /* Text color */
@@ -78,6 +82,8 @@ body {
   cursor: pointer; /* Pointer cursor on hover */
   text-align: center; /* Center text horizontally */
   margin-bottom: 10px; /* Space below the status bar */
+  width: 100%; /* Full width */
+  height: 50px; /* Fixed height */
 }
 
 /* Container for the dropdown menu */
