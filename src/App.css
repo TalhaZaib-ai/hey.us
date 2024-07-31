@@ -1,7 +1,7 @@
 /* Apply the 'Roboto' font family and set the background color of the body */
 body {
   font-family: 'Roboto', sans-serif;
-  background-color: #e6fac2; /* Ensure the background color matches Picture 1 */
+  background-color: #e6fac2; /* for background color */
 }
 
 /* Main layout styling */
