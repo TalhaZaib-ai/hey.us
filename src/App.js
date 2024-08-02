@@ -1,15 +1,11 @@
 import React, { useState } from 'react';
 import './App.css';
-
-// Import Tabler icons
 import { IconCircle, IconLoader, IconCheck, IconX } from '@tabler/icons-react';
 
-// Main App component
 const App = () => {
   const [isDropdownOpen, setDropdownOpen] = useState(false);
   const [selectedStatus, setSelectedStatus] = useState({
     label: 'Status',
-    color: '',
     icon: null
   });
 
@@ -26,7 +22,7 @@ const App = () => {
 
   const handleSelectStatus = (option) => {
     setSelectedStatus(option);
-    setDropdownOpen(false);
+    setDropdownOpen(false); // Close the dropdown after selection
   };
 
   return (
@@ -53,10 +49,13 @@ const App = () => {
           <div className="dropdown-container">
             <div className="dropdown">
               <ul className="dropdown-list">
+                <li className="dropdown-item header-item">
+                  <span className="label header-label">Status</span>
+                </li>
                 {statusOptions.map((option, index) => (
                   <li key={index} className="dropdown-item" onClick={() => handleSelectStatus(option)}>
                     <div className="icon" style={{ backgroundColor: option.color }}>
-                      {option.icon}
+                      {React.cloneElement(option.icon, { size: 24 })}
                     </div>
                     <span className="label">{option.label}</span>
                   </li>
