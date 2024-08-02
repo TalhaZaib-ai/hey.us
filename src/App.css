@@ -79,13 +79,16 @@ body {
 }
 
 .status-bar .status-icon-wrapper {
-  margin-right: 35px;
+  margin-right: 0px;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: first baseline;
   background-color: #ffffff; /* Default background color */
   border-radius: 8px;
+  margin-top: 15px;
+  margin-left: 40px;
 }
+
 
 .status-bar .label {
   margin-left: 10px; /* Space between icon and text */
