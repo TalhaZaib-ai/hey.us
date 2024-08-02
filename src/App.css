@@ -12,26 +12,25 @@ body {
   gap: 25px;
 }
 
-.left-dialog {
-  border: 2px dashed #9c27b0;
-  padding: 20px;
-  border-radius: 8px;
-  background-color: #e6fac2;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+/* Styling for both dialog boxes */
+.left-dialog,
+.right-dialog {
+  border: 2px dashed #9c27b0; /* Dashed border with purple color */
+  padding: 20px; /* Padding inside the dialog */
+  border-radius: 8px; /* Rounded corners */
+  background-color: #e6fac2; /* Background color of the dialog */
+  display: flex; /* Use flexbox for layout */
+  flex-direction: column; /* Arrange children in a column */
+  align-items: center; /* Center children horizontally */
 }
 
 .right-dialog {
-  border: 2px solid #90caf9;
-  background-color: #fff;
-  border-radius: 8px;
-  padding: 20px;
-  position: relative;
-  width: 300px; /* Ensure consistent width */
-  box-sizing: border-box; /* Include padding and border in width */
+  border: 2px solid #90caf9; /* Solid border with blue color */
+  background-color: #fff; /* White background color */
+  position: relative; /* Positioning context for the dropdown */
 }
 
+/* Styling for headings */
 .heading {
   font-size: 14px;
   color: #7c4dff;
@@ -49,8 +48,7 @@ body {
 }
 
 .status-heading {
-  margin-right: 5px;
-  display: flex;
+  margin-right: 5px; /* Space to the right of the heading */
 }
 
 .status-icon-wrapper {
@@ -64,57 +62,46 @@ body {
 }
 
 .status-bar {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start; /* Align items to start */
-  padding: 10px;
-  font-size: 16px;
-  color: #333; /* Darker text color for better contrast */
-  border: 1px solid #e0e0e0;
-  border-radius: 8px;
-  cursor: pointer;
-  width: 100%;
-  height: 60px; /* Adjust height for better alignment */
-  box-sizing: border-box; /* Include padding and border in dimensions */
+  display: flex; /* Use flexbox for layout */
+  align-items: center; /* Center items vertically */
+  justify-content: flex-start; /* Align items horizontally with space on the left */
+  padding: 10px; /* Padding inside the status bar */
+  font-size: 16px; /* Font size */
+  color: #888; /* Text color */
+  border: 1px solid #e0e0e0; /* Border color */
+  border-radius: 8px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  text-align: left; /* Align text to the left */
+  margin-bottom: 10px; /* Space below the status bar */
+  width: 100%; /* Full width */
+  height: 50px; /* Fixed height */
 }
 
 .status-bar .status-icon-wrapper {
-  margin-right: 0px;
-  display: flex;
-  align-items: center;
-  justify-content: first baseline;
-  background-color: #ffffff; /* Default background color */
-  border-radius: 8px;
-  margin-top: 15px;
-  margin-left: 40px;
+  margin-right: 10px; /* Add margin to the right of the icon */
 }
 
-
 .status-bar .label {
-  margin-left: 10px; /* Space between icon and text */
-  font-size: 18px;
-  color: #333;
-  display: flex;
-  align-items: center;
-  line-height: normal;
-  flex-grow: 1; /* Allow label to take remaining space */
+  margin-left: 10px; /* Add margin to the left of the label */
+  display: flex; /* Use flexbox for layout */
+  align-items: center; /* Center items vertically */
+  flex-grow: 1; /* Allow the label to grow */
 }
 
 .dropdown-container {
-  position: absolute;
-  top: 50px; /* Move upwards to fit within the container */
-  left: 0;
-  right: 0;
-  z-index: 10;
+  position: absolute; /* Absolute positioning */
+  top: 60px; /* Position from the top */
+  left: 0; /* Position from the left */
+  right: 0; /* Position from the right */
+  z-index: 10; /* Ensure the dropdown appears above other elements */
 }
 
 .dropdown {
-  width: 100%;
-  border: 1px solid #e0e0e0;
-  border-radius: 8px;
-  background-color: #fff;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  box-sizing: border-box;
+  width: 100%; /* Full width */
+  border: 1px solid #e0e0e0; /* Border color */
+  border-radius: 8px; /* Rounded corners */
+  background-color: #fff; /* White background */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Shadow for the dropdown */
 }
 
 .dropdown-list {
@@ -124,39 +111,37 @@ body {
 }
 
 .dropdown-item {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  padding: 12px 20px;
-  cursor: pointer;
-  border-bottom: 1px solid #e0e0e0;
-  box-sizing: border-box;
+  display: flex; /* Use flexbox for layout */
+  align-items: center; /* Center items vertically */
+  padding: 15px 20px; /* Padding inside each item */
+  cursor: pointer; /* Pointer cursor on hover */
+  border-bottom: 1px solid #e0e0e0; /* Bottom border */
 }
 
-.header-item {
+/* Remove the bottom border for the last item */
+.dropdown-item:last-child {
   border-bottom: none;
-  background-color: #f9f9f9;
 }
 
-.header-label {
-  font-size: 14px;
-  color: #aaa;
-  text-align: center;
-  flex-grow: 1;
-}
-
+/* Styling for icons within the dropdown */
 .icon {
-  width: 40px;
-  height: 40px;
-  border-radius: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-right: 15px;
-  flex-shrink: 0;
-  box-sizing: border-box;
+  width: 40px; /* Fixed width */
+  height: 40px; /* Fixed height */
+  border-radius: 12px; /* Rounded corners */
+  display: flex; /* Use flexbox for layout */
+  align-items: center; /* Center items vertically */
+  justify-content: center; /* Center items horizontally */
+  margin-right: 15px; /* Space to the right of the icon */
 }
 
+/* Styling for labels within the dropdown */
+.label {
+  font-size: 15px; /* Font size */
+  color: #333; /* Text color */
+  text-align: left; /* Align text to the left */
+}
+
+/* Change background color on hover for dropdown items */
 .dropdown-item:hover {
   background-color: #f5f5f5;
 }
